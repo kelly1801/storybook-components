@@ -27,17 +27,23 @@ export interface LabelProps {
    * Defines a custom font color
    */
   fontColor?: string;
+   /**
+   * Defines a custom bg-color
+   */
+  backgroundColor: string;
+
 }
 const MyLabel = ({
   label = "No label",
   size = "normal",
   color = "primary",
   allCaps = false,
-  fontColor = "#06D6A0",
+  fontColor = "#FFF",
+  backgroundColor = "#3F2E56"
 }: LabelProps) => {
   return (
     <span
-      style={{ color: fontColor }}
+      style={{ color: fontColor, backgroundColor}}
       className={`label ${size}  text-${color}`}
     >
       {allCaps ? label.toLocaleUpperCase() : label}
