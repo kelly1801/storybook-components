@@ -33,7 +33,7 @@ export interface LabelProps {
   backgroundColor: string;
 
 }
-const MyLabel = ({
+export const MyLabel = ({
   label = "No label",
   size = "normal",
   color = "primary",
